@@ -5,3 +5,5 @@ progressive_download.txt
 */game/cache
 */game/saves
 *-dists/
+*dists/
+*.cache
