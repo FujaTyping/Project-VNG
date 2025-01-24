@@ -62,6 +62,35 @@ label start:
 
     e "Here is the movement"
 
+    menu:
+        e "Choose the choice"
+        "Yes":
+            jump yesC
+        "No":
+            jump noC
+        "Up to you":
+            jump utyC
+
     # This ends the game.
 
+    #return
+
+label yesC:
+    e "You selected Yes"
+
+    window hide
+    pause
+
+    e "That is the pause"
+    
+    return
+
+label noC:
+    e "You selected No"
+    
+    return
+
+label utyC:
+    e "You selected Up to you"
+    
     return

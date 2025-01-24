@@ -1,4 +1,7 @@
 log.txt
 error.txt
+errors.txt
+progressive_download.txt
 */game/cache
 */game/saves
+*-dists/
