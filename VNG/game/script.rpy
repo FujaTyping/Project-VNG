@@ -4,6 +4,7 @@
 # name of the character.
 
 define e = Character("Eileen")
+define n = Character("Naaa")
 define you = Character("[player_name]")
 
 # The game starts here.
@@ -35,6 +36,8 @@ label start:
     show eileen happy with dissolve 
 
     # These display lines of dialogue.
+
+    e "สวัสดี!, นี่คือเกม DEMO"
 
     e "Hello this is a test game"
 
@@ -87,7 +90,11 @@ label yesC:
 
 label noC:
     e "You selected No"
+
+    show naaa with dissolve 
     
+    n "I love haniff <3"
+
     return
 
 label utyC:
