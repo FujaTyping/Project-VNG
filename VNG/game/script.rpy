@@ -4,7 +4,7 @@
 # name of the character.
 
 define e = Character("Eileen")
-
+define you = Character("[player_name]")
 
 # The game starts here.
 
@@ -20,13 +20,47 @@ label start:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show eileen happy
+    "Choose your name"
+
+    $ player_name = renpy.input("What is your name?")
+    $ player_name = player_name.strip()
+
+    if player_name == "":
+        $ player_name="Film"
+
+    e "Very nice name"
+
+    you "Thanks !"
+
+    show eileen happy with dissolve 
 
     # These display lines of dialogue.
 
-    e "You've created a new Ren'Py game."
+    e "Hello this is a test game"
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    show eileen happy with hpunch
+
+    e "Here is the shake"
+
+    show eileen happy:
+        parallel:
+            ease 1.0 zoom 1.5
+        parallel:
+            yalign 0.0
+            linear 0.5 yalign 0.125
+
+    e "Here is the zoom"
+
+    show eileen happy:
+        parallel:
+            ease 1.0 zoom 1
+        parallel:
+            linear 0.5 yalign 0.125
+
+    show eileen happy:
+        linear 1.0 xpos 0.225
+
+    e "Here is the movement"
 
     # This ends the game.
 
