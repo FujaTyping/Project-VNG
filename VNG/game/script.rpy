@@ -35,6 +35,28 @@ label start:
 
     you "Thanks !"
 
+    scene bg black with fade
+
+    window hide
+
+    show text Text("This is film", size=60) as centered_text:
+        xalign 0.5
+        yalign 0.5
+    with dissolve
+    pause 3
+
+    hide centered_text
+
+    show text Text("500 years ago", size=60) as centered_text_2:
+        xalign 0.5
+        yalign 0.5
+    with dissolve
+    pause 3
+
+    hide centered_text_2 with dissolve
+
+    scene bg room with fade
+
     play music "share/sence.ogg"
 
     show film rabbit with dissolve:
@@ -107,4 +129,6 @@ label noC:
 label utyC:
     e "You selected Up to you"
     
+    e "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+
     return
