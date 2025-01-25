@@ -15,6 +15,8 @@ label start:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
+    stop music fadeout 1.0
+
     scene bg room
 
     # This shows a character sprite. A placeholder is used, but you can
@@ -33,6 +35,8 @@ label start:
 
     you "Thanks !"
 
+    play music "share/sence.ogg"
+
     show eileen happy with dissolve 
 
     # These display lines of dialogue.
@@ -40,6 +44,8 @@ label start:
     e "สวัสดี!, นี่คือเกม DEMO"
 
     e "Hello this is a test game"
+
+    play sound "share/punch.mp3"
 
     show eileen happy with hpunch
 
@@ -82,6 +88,7 @@ label yesC:
     e "You selected Yes"
 
     window hide
+    stop music fadeout 1.0
     pause
 
     e "That is the pause"
