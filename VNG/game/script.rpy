@@ -3,7 +3,7 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen")
+define e = Character("Film")
 define n = Character("Naaa")
 define you = Character("[player_name]")
 
@@ -29,7 +29,7 @@ label start:
     $ player_name = player_name.strip()
 
     if player_name == "":
-        $ player_name="Film"
+        $ player_name="FilmZz"
 
     e "Very nice name"
 
@@ -37,7 +37,9 @@ label start:
 
     play music "share/sence.ogg"
 
-    show eileen happy with dissolve 
+    show film rabbit with dissolve:
+        xalign 0.5
+        yalign 0.125
 
     # These display lines of dialogue.
 
@@ -47,26 +49,24 @@ label start:
 
     play sound "share/punch.mp3" volume 0.5
 
-    show eileen happy with hpunch
+    show film rabbit with hpunch
 
     e "Here is the shake"
 
-    show eileen happy:
+    show film rabbit:
+        yalign 0.125
         parallel:
             ease 1.0 zoom 1.5
-        parallel:
-            yalign 0.0
-            linear 0.5 yalign 0.125
 
     e "Here is the zoom"
 
-    show eileen happy:
+    show film rabbit:
         parallel:
             ease 1.0 zoom 1
         parallel:
             linear 0.5 yalign 0.125
 
-    show eileen happy:
+    show film rabbit:
         linear 1.0 xpos 0.225
 
     e "Here is the movement"
