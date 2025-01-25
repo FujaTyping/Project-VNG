@@ -8,3 +8,4 @@ progressive_download.txt
 *-dists/
 *dists/
 *.cache
+*.bak
