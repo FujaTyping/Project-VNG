@@ -50,7 +50,7 @@ define config.has_sound = True
 define config.has_music = True
 define config.has_voice = True
 
-define config.default_music_volume = .25
+define config.default_music_volume = 0.75
 
 
 ## To allow the user to play a test sound on the sound or voice channel,
