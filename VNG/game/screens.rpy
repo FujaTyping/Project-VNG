@@ -242,20 +242,61 @@ screen quick_menu():
 
     if quick_menu:
 
-        hbox:
+        vbox:
             style_prefix "quick"
 
-            xalign 0.5
-            yalign 1.0
+            xalign 0.01
+            yalign 0.99
 
-            textbutton _("Back") action Rollback()
-            textbutton _("History") action ShowMenu('history')
-            textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Auto") action Preference("auto-forward", "toggle")
-            textbutton _("Save") action ShowMenu('save')
-            textbutton _("Q.Save") action QuickSave()
-            textbutton _("Q.Load") action QuickLoad()
-            textbutton _("Prefs") action ShowMenu('preferences')
+            #textbutton _("Back") action Rollback()
+            imagebutton:
+                idle Transform("quickmenu/back.png", size=(30, 30))
+                hover Transform("quickmenu/back_hover.png", size=(30, 30))
+                focus_mask True
+                bottom_margin 10
+                action Rollback()
+
+            #textbutton _("History") action ShowMenu('history')
+            imagebutton:
+                idle Transform("quickmenu/history.png", size=(30, 30))
+                hover Transform("quickmenu/history_hover.png", size=(30, 30))
+                focus_mask True
+                bottom_margin 10
+                action ShowMenu('history')
+
+            #textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
+            #textbutton _("Auto") action Preference("auto-forward", "toggle")
+            #textbutton _("Save") action ShowMenu('save')
+            imagebutton:
+                idle Transform("quickmenu/save.png", size=(30, 30))
+                hover Transform("quickmenu/save_hover.png", size=(30, 30))
+                focus_mask True
+                bottom_margin 10
+                action ShowMenu('save')
+
+            #textbutton _("Q.Save") action QuickSave()
+            imagebutton:
+                idle Transform("quickmenu/quicksave.png", size=(30, 30))
+                hover Transform("quickmenu/quicksave_hover.png", size=(30, 30))
+                focus_mask True
+                bottom_margin 10
+                action QuickSave()
+
+            #textbutton _("Q.Load") action QuickLoad()
+            imagebutton:
+                idle Transform("quickmenu/load.png", size=(30, 30))
+                hover Transform("quickmenu/load_hover.png", size=(30, 30))
+                focus_mask True
+                bottom_margin 10
+                action QuickLoad()
+
+            #textbutton _("Prefs") action ShowMenu('preferences')
+            imagebutton:
+                idle Transform("quickmenu/setting.png", size=(30, 30))
+                hover Transform("quickmenu/setting_hover.png", size=(30, 30))
+                focus_mask True
+                bottom_margin 10
+                action ShowMenu('preferences')
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever

@@ -45,7 +45,7 @@ label start:
 
     e "Hello this is a test game"
 
-    play sound "share/punch.mp3"
+    play sound "share/punch.mp3" volume 0.5
 
     show eileen happy with hpunch
 
