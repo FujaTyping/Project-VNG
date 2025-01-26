@@ -403,15 +403,20 @@ screen main_menu():
     ## contents of the main menu are in the navigation screen.
     use navigation
 
+    add "images/game_title.png":
+        xpos 510 ypos -100
+        size (680, 420)
+        rotate -10
+
     if gui.show_name:
 
         vbox:
             style "main_menu_vbox"
 
-            text "[config.name!t]":
-                style "main_menu_title"
+            #text "[config.name!t]":
+                #style "main_menu_title"
 
-            text "[config.version]":
+            text "V.[config.version]":
                 style "main_menu_version"
 
 
