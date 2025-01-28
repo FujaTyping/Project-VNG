@@ -43,7 +43,7 @@ label start:
         xalign 0.5
         yalign 0.5
     with dissolve
-    pause 3
+    pause 1
 
     hide centered_text
 
@@ -51,7 +51,7 @@ label start:
         xalign 0.5
         yalign 0.5
     with dissolve
-    pause 3
+    pause 1
 
     hide centered_text_2 with dissolve
 
@@ -117,12 +117,16 @@ label yesC:
     
     return
 
-label noC:
-    e "You selected No"
+image Note = "share/Note.png"
 
-    show naaa with dissolve 
+label noC:
+    e "You selected No" 
     
-    n "I love haniff <3"
+    show Note with dissolve :
+        xpos 880
+        ypos 220
+
+    n "You got a note"
 
     return
 
